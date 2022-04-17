@@ -7,7 +7,7 @@ var AWS = require("aws-sdk");
 var awsConfig = {
     "region": "ap-south-1",
     "endpoint": "http://dynamodb.ap-south-1.amazonaws.com",
-    "accessKeyId": "AKIAZRN5MRSIUTGVDTVE", "secretAccessKey": "3Tzz6/0LOCBLxZ+T7Nu1AmfCOV+vkdezBKWjAWvA"
+    "accessKeyId": "Your_keyid", "secretAccessKey": "your_key"
 };
 AWS.config.update(awsConfig);
 let docClient = new AWS.DynamoDB.DocumentClient();
