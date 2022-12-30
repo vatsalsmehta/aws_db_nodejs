@@ -12,4 +12,4 @@ const awsConfig ={
 AWS.config.update(awsConfig);
 
 export const docClient = new AWS.DynamoDB.DocumentClient();
-export const tableName = process.env.TABLENAME as string;
+export const tableName = process.env.TABLENAME;
