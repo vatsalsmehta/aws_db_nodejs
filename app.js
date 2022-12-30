@@ -1,6 +1,6 @@
 import { docClient, tableName } from "./awsconfig.js";
 
-export const handleSignUp = async(email, password, username) => {
+export const addItemToDB = async(email, password, username) => {
     
     // I have given Partition key and sort key as PK and SK respectively
     const data = {
@@ -24,4 +24,26 @@ export const handleSignUp = async(email, password, username) => {
 
 }
 
-handleSignUp("qt@gmail.com", "testpass", "testname");
+export const getItemFromDb = async (pkValue, skValue) => {
+
+    // to get a single record we search by its PK and SK
+    const params = {
+        TableName: tableName,
+        Key: {
+            "PK": pkValue,
+            "SK": skValue
+        }
+    };
+
+    docClient.get(params, function(err, data) {
+        if (err) {
+          console.log("Error", err);
+        } else {
+          console.log("Read successfull", data.Item);
+        }
+    });
+}
+
+
+addItemToDB("qt@gmail.com", "testpass", "testname");
+getItemFromDb("qt@gmail.com", "testpass");

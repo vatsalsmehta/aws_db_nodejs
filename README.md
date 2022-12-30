@@ -3,4 +3,6 @@ A simple nodejs server that shows how can one perform crud operations via nodejs
 
 Here we use docClient for the same. We add a simple item to the db
 
-###Following are the steps for deploying a node.js webapp to aws and also using database from aws###
+We have performed the following operations:
+Add a record to Database inside function addItemToDB
+Get a record from Database inside function getItemFromDb
