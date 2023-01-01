@@ -1,4 +1,4 @@
-import { docClient, tableName } from "./awsconfig.js";
+import { docClient, tableName } from "./awsConfigsV2.js";
 
 // All the refrences are taken from the following webpage: 
 // https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html

@@ -2,7 +2,7 @@ import AWS from "aws-sdk";
 import dotenv from "dotenv";
 dotenv.config();
 
-const awsConfig ={
+const awsConfig = {
     "region": process.env.REGION,
     "endpoint": process.env.ENDPOINT,
     "accessKeyId": process.env.AWS_KEYID,
