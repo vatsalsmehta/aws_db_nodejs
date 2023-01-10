@@ -1,4 +1,4 @@
-import { dynamoClientV3 } from "./awsConfigsV3.js";
+import { dynamoClientV3, tableName } from "./awsConfigsV3.js";
 
 // Import required AWS SDK clients and commands for Node.js
 import { BatchGetItemCommand } from "@aws-sdk/client-dynamodb";
@@ -6,7 +6,7 @@ import { BatchGetItemCommand } from "@aws-sdk/client-dynamodb";
 // Set the parameters
 export const params = {
     RequestItems: {
-        TABLE_NAME: {
+        tableName: {
             Keys: [
                 {
                     KEY_NAME_1: { N: "KEY_VALUE" },
